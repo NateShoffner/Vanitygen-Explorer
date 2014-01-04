@@ -1,0 +1,3 @@
+[submodule "vanitygen"]
+	path = vanitygen
+	url = https://github.com/samr7/vanitygen
