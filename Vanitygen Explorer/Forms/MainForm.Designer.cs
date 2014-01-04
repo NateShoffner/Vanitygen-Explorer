@@ -441,7 +441,7 @@ namespace Vanitygen_Explorer.Forms
             this.Name = "MainForm";
             this.Text = "Vanitygen Explorer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.MainForm2_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panelControls.ResumeLayout(false);
             this.panelControls.PerformLayout();

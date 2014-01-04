@@ -137,15 +137,9 @@ namespace Vanitygen_Explorer.Forms
             StopGen();
         }
 
-        private void MainForm2_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             numThreads.Value = Environment.ProcessorCount;
-
-            //todo remove
-            numThreads.Value = 1;
-            numVersion.Value = 30;
-            txtPatterns.Text = "DTEST";
-            chkCase.Checked = true;
         }
 
         private void aboutMenuItem_Click(object sender, EventArgs e)
