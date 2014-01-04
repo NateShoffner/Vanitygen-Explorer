@@ -28,7 +28,7 @@ namespace Vanitygen_Explorer.Forms
 
             PopulateExporters();
 
-            _exporters = new List<IVanitygenExporter>() { new XmlExporter() };
+            _exporters = new List<IVanitygenExporter> {new XmlExporter(), new CsvExporter()};
 
             _vanitygen = new Vanitygen(Program.VanityGenPath) {SynchronizingObject = this};
 
