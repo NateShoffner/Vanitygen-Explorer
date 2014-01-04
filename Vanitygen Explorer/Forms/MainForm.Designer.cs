@@ -53,6 +53,8 @@ namespace Vanitygen_Explorer.Forms
             this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.exitMenuItem = new System.Windows.Forms.MenuItem();
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.exportMenuItem = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
             this.autoScrollMenuItem = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
@@ -71,8 +73,6 @@ namespace Vanitygen_Explorer.Forms
             this.olvColAddress = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.olvColKey = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.exportDialog = new System.Windows.Forms.SaveFileDialog();
-            this.menuItem4 = new System.Windows.Forms.MenuItem();
-            this.menuItem5 = new System.Windows.Forms.MenuItem();
             this.panel1.SuspendLayout();
             this.panelControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAddresses)).BeginInit();
@@ -276,9 +276,22 @@ namespace Vanitygen_Explorer.Forms
             this.exitMenuItem.Text = "Exit";
             this.exitMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 1;
+            this.menuItem4.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.exportMenuItem});
+            this.menuItem4.Text = "&Edit";
+            // 
+            // exportMenuItem
+            // 
+            this.exportMenuItem.Index = 0;
+            this.exportMenuItem.Text = "Export";
+            this.exportMenuItem.Click += new System.EventHandler(this.exportMenuItem_Click);
+            // 
             // menuItem2
             // 
-            this.menuItem2.Index = 1;
+            this.menuItem2.Index = 2;
             this.menuItem2.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.autoScrollMenuItem});
             this.menuItem2.Text = "&View";
@@ -291,7 +304,7 @@ namespace Vanitygen_Explorer.Forms
             // 
             // menuItem3
             // 
-            this.menuItem3.Index = 2;
+            this.menuItem3.Index = 3;
             this.menuItem3.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.aboutMenuItem});
             this.menuItem3.Text = "&Help";
@@ -416,18 +429,6 @@ namespace Vanitygen_Explorer.Forms
             // 
             this.exportDialog.Title = "Export Results";
             // 
-            // menuItem4
-            // 
-            this.menuItem4.Index = 1;
-            this.menuItem4.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem5});
-            this.menuItem4.Text = "&Edit";
-            // 
-            // menuItem5
-            // 
-            this.menuItem5.Index = 0;
-            this.menuItem5.Text = "Export";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,7 +500,7 @@ namespace Vanitygen_Explorer.Forms
         private BrightIdeasSoftware.OLVColumn olvColAddress;
         private BrightIdeasSoftware.OLVColumn olvColKey;
         private MenuItem menuItem4;
-        private MenuItem menuItem5;
+        private MenuItem exportMenuItem;
         private SaveFileDialog exportDialog;
     }
 }

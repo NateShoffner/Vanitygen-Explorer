@@ -50,6 +50,7 @@
     <Compile Include="AddressGeneratedEventArgs.cs" />
     <Compile Include="CommonUtils.cs" />
     <Compile Include="Exporters\IVanitygenExporter.cs" />
+    <Compile Include="Exporters\XmlExporter.cs" />
     <Compile Include="Forms\AboutDialog.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -28,6 +28,8 @@ namespace Vanitygen_Explorer.Forms
 
             PopulateExporters();
 
+            _exporters = new List<IVanitygenExporter>() { new XmlExporter() };
+
             _vanitygen = new Vanitygen(Program.VanityGenPath) {SynchronizingObject = this};
 
             olvColPattern.AspectGetter = x => ((VanitygenResult) x).Pattern;
@@ -170,6 +172,21 @@ namespace Vanitygen_Explorer.Forms
         private void autoScrollMenuItem_Click(object sender, EventArgs e)
         {
             autoScrollMenuItem.Checked = !autoScrollMenuItem.Checked;
+        }
+
+        private void exportMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_results.Count == 0)
+            {
+                MessageBox.Show("There is nothing to export.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (exportDialog.ShowDialog() == DialogResult.OK)
+            {
+                var exporter = _exporters[exportDialog.FilterIndex - 1];
+                exporter.Export(exportDialog.FileName, _results);
+            }
         }
     }
 }
